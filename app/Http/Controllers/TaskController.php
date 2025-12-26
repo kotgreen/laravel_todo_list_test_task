@@ -25,8 +25,8 @@ class TaskController extends Controller
     {
         $data = request()->validate([
             'title' => 'required|string',
-            'description' => 'required|string',
-            'status_id' => '',
+            'description' => '',
+            'status_id' => 'string',
         ]);
         Task::create($data);
 
@@ -50,7 +50,7 @@ class TaskController extends Controller
     {
         $data = request()->validate([
             'title' => 'string',
-            'description' => 'string',
+            'description' => '',
             'status_id' => 'string',
         ]);
         $task->update($data);

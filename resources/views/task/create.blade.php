@@ -10,16 +10,12 @@
                     value="{{ old('title') }}">
 
                 @error('title')
-                    <p class="text-danger">{{ $message }}</p>
+                    <p class="text-danger">Title должен быть заполнен</p>
                 @enderror
             </div>
             <div class="form-group mb-2">
                 <label for="description">Description</label>
                 <textarea class="form-control" name="description" id="description" placeholder="Description">{{ old('description') }}</textarea>
-
-                @error('description')
-                    <p class="text-danger">{{ $message }}</p>
-                @enderror
             </div>
             <div class="form-group mb-3">
                 <label for="status">Status</label>
@@ -30,7 +26,10 @@
                     @endforeach
                 </select>
             </div>
-            <button type="submit" class="btn btn-primary btn-sm">Create</button>
+            <div class="d-flex gap-2">
+                <button type="submit" class="btn btn-primary btn-sm">Create</button>
+                <a href="{{ route('task.index') }}" class="btn btn-secondary btn-sm">Back</a>
+            </div>
         </form>
     </div>
 @endsection

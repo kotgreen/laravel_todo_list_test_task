@@ -15,13 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('title');
             $table->text('description')->nullable();
-            $table->boolean('status')->default(false);
             $table->timestamps();
             $table->softDeletes();
 
-            $table->unsignedBigInteger('status_id')->nullable();
-            $table->index('status_id', 'task_status_idx');
-            $table->foreign('status_id', 'task_status_fk')->on('statuses')->references('id');
+            $table->unsignedBigInteger('status_id');
         });
     }
 
