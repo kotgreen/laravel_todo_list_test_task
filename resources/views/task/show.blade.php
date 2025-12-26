@@ -2,9 +2,9 @@
 @section('content')
     <h1>To-Do List</h1>
     <div class="mb-2">
-        <div> {{ $task->title }} </div>
-        <div> {{ $task->description }} </div>
-        <div> {{ $task->status->name }} </div>
+        <div>Title: {{ $task->title }} </div>
+        <div>Description: {{ $task->description }} </div>
+        <div>Status: {{ $task->status->name }} </div>
     </div>
     <div class="d-flex gap-2">
         <div>
