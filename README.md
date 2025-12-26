@@ -3,8 +3,8 @@
 
 Развертывание проекта:
 
-1. git clone https://github.com/kotgreen/laravel_todo_list_test_task.git laravel_todo_list_test_task
-2. cd laravel_todo_list_test_task
+1. git clone 
+2. cd folder
 3. composer install
 4. cp .env.example .env, пропишите настройки
 5. php artisan key:generate
