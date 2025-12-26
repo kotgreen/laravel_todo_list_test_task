@@ -9,4 +9,6 @@
 4. cp .env.example .env, пропишите настройки
 5. php artisan key:generate
 6. php artisan migrate --seed
-7. php artisan serve
+7. npm install
+8. npm run dev
+9. php artisan serve
